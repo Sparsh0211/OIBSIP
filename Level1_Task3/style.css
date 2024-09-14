@@ -1,0 +1,156 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: url('weather-backgrounds.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+img {
+    height: 30px;
+    width: 30px;
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.7); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+select {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    background-color: #f9f9f9;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+select:focus {
+    border-color: #007BFF;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.converter {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+button {
+    background-color: #007BFF;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s; 
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.arrow {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #0b035b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .container {
+        padding: 15px;
+        max-width: 350px;
+    }
+
+    input, select, button {
+        font-size: 14px; 
+        padding: 8px; 
+    }
+
+    .arrow {
+        font-size: 20px; 
+    }
+
+    .result {
+        font-size: 1em; 
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; 
+    }
+
+    .container {
+        padding: 10px; 
+        max-width: 90%; 
+    }
+
+    input, select, button {
+        font-size: 12px; 
+        padding: 6px; 
+    }
+
+    .arrow {
+        font-size: 18px; 
+    }
+
+    .result {
+        font-size: 0.9em; 
+    }
+}

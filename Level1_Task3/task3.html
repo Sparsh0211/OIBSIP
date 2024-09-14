@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <div class="converter">
+            <div class="input-group">
+                <input id="tempInput" type="number" placeholder="Enter temperature" />
+                <select id="unitSelect">
+                    <option value="" disabled selected>Select unit</option>
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                </select>
+            </div>
+            <img src="43254-green-right-arrow-clipart.png" alt="Arrow">
+            <select id="targetUnitSelect">
+                <option value="" disabled selected>Select unit</option>
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+            </select>
+            <button onclick="performConversion()">Convert</button>
+            <div class="result" id="conversionResult"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
