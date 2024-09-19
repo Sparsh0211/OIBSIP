@@ -4,8 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hello</h1>
+    <section id="section-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/Logo.png" alt="Logo" id="profile-image">
+            </div>
+            <div class="hamburger" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="options" id="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="know_more.html">Know More</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#Education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section -->
+    <section id="Hero">
+        <div class="myPicture">
+            <img src="assets/SV_1.jpg" alt="Sparsh Verma">
+        </div>
+        <div id="about">
+            <h1>I'm Sparsh Verma</h1>
+            <h2>Web Developer</h2>
+            <p>Passionate Web Developer skilled in HTML, CSS, and JavaScript, focused on creating dynamic and responsive websites.</p>
+        </div>
+    </section>
+    <section id="Education">
+        <h3>Education Details</h3>
+        <div class="education-container">
+            <div class="education-item">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                    <h4>B.Tech</h4>
+                    <p>Government Engineering College, Bilaspur</p>
+                    <p>Pursuing (Grade: 79.34%)</p>
+                    <p>Graduating Year - 2025</p>
+                </div>
+            </div>
+            <div class="education-item center-item">
+                <i class="fas fa-school"></i>
+                <div>
+                    <h4>12<sup>th</sup></h4>
+                    <p>St Vincent Pallotti Sr. Sec. School, Bilaspur</p>
+                    <p>Grade: 75.2%</p>
+                    <p>Completion Year - 2020</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <i class="fas fa-school"></i>
+                <div>
+                    <h4>10<sup>th</sup></h4>
+                    <p>St Vincent Pallotti Sr. Sec. School, Bilaspur</p>
+                    <p>Grade: 79.33%</p>
+                    <p>Completion   Year - 2018</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <h3>Skills</h3>
+        <div class="skills-container">
+            <div class="skills-scroll">
+                <img src="assets/Html_logo-removebg-preview.png" alt="HTML">
+                <img src="assets/css-logo.png" alt="CSS">
+                <img src="assets/js_logo-removebg-preview.png" alt="JavaScript">
+                <img src="assets/bootstrap_logo-removebg-preview.png" alt="Bootstrap">
+                <img src="assets/express_logo-removebg-preview.png" alt="Express">
+                <img src="assets/node_logo-removebg-preview (1).png" alt="Node.js">
+                <img src="assets/python_logo-removebg-preview.png" alt="Python">
+                <img src="assets/ML Logo.png" alt="Machine Learning">
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h3>Projects</h3>
+        <div class="projects-container">
+            <div class="project-item">
+                <div class="project-image">
+                    <img src="assets/CNC.png" alt="Mini CNC Plotter">
+                </div>
+                <div class="project-details">
+                    <h4>Mini CNC Plotter</h4>
+                    <p>It is an IoT based project, which is capable of Drawing and Writing any Texts or Images on a piece of paper.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-image">
+                    <img src="assets/essential-elements-building-ecommerce-website.jpg" alt="E-Commerce Website">
+                </div>
+                <div class="project-details">
+                    <h4>E-Commerce Website</h4>
+                    <p>A platform for buying any products, which contains a feature for Vendors through which they can post info about any products and User Login.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-image">
+                    <img src="assets/best-image-text-converter.jpg" alt="Image to Text Conversion">
+                </div>
+                <div class="project-details">
+                    <h4>Image to Text Conversion</h4>
+                    <p>It is an ML based project which translates the characters present on any image to text.</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-image">
+                    <img src="assets/ai.jpeg" alt="AI Chatbot">
+                </div>
+                <div class="project-details">
+                    <h4>AI Chatbot</h4>
+                    <p>AI Chatbot with API which gives results when the prompt is entered.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="certificates">
+        <h3>Certificates</h3>
+        <div class="certificates-container">
+            <div class="certificate-item">
+                <div class="certificate-details">
+                    <h4>Summer Training Details</h4>
+                    <p>The web development training from Acmegrade Pvt. Ltd., a Bangalore-based company, provides comprehensive learning in building modern websites and web applications. The program typically covers essential skills like HTML, CSS, JavaScript, and frameworks, offering hands-on experience in creating responsive, user-friendly designs.</p>
+                    <button><a href="https://drive.google.com/drive/folders/1RocPoONZJxx8ElPz0myhf8jZuSJIceSm">View Certificate</a></button>
+                </div>
+            </div>
+            
+            <div class="certificate-item">
+                <div class="certificate-details">
+                    <h4>Internship from Acmegrade</h4>
+                    <p>The internship offered by Acmegrade Pvt. Ltd., a Bangalore-based company, allows you to apply your web development training in a professional setting. This hands-on experience involves working on real-world projects, enhancing your skills in front-end and back-end development.</p>
+                    <button><a href="https://drive.google.com/drive/folders/1RocPoONZJxx8ElPz0myhf8jZuSJIceSm">View Certificate</a></button>
+                </div>
+            </div>
+    
+            <div class="certificate-item">
+                <div class="certificate-details">
+                    <h4>Training in Machine Learning</h4>
+                    <p>The machine learning training from Persistence Software Solutions equips you with the foundational and advanced skills required to excel in this rapidly growing field. The program covers essential concepts such as supervised and unsupervised learning, data preprocessing, and model building.</p>
+                    <button><a href="https://drive.google.com/drive/folders/1RocPoONZJxx8ElPz0myhf8jZuSJIceSm">View Certificate</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h3>Contact Me</h3>
+        <a href="mailto:arpitsparshv0211@gmail.com">
+            <img src="assets/png-transparent-new-logo-gmail-google-new-logos-icon-thumbnail-removebg-preview.png" alt="Email">
+        </a>
+        <a href="https://www.linkedin.com/in/sparsh-verma-b4885222b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+            <img src="assets/linkedin_logo-removebg-preview.png" alt="LinkedIn">
+        </a>
+        <a href="https://www.instagram.com/sparsh_v02?igsh=ZnNyenpmenZib3Mw">
+            <img src="assets/instagram-removebg-preview.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/sparsh.verma.5203?mibextid=ZbWKwL">
+            <img src="assets/facebook-removebg-preview.png" alt="Facebook">
+        </a>
+    </section>
+    
+    <footer>
+        <p>&copy;. Sparsh Verma Portfolio </p>
+    </footer>
+    
+    <script>
+        const hamburger = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+    
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
