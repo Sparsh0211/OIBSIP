@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- header section -->
     <section id="section-header">
         <div class="header-container">
             <div class="logo">
@@ -77,7 +78,7 @@
             </div>
         </div>
     </section>
-    
+    <!-- skills section -->
     <section id="skills">
         <h3>Skills</h3>
         <div class="skills-container">
@@ -93,6 +94,8 @@
             </div>
         </div>
     </section>
+
+    <!-- projects section -->
     <section id="projects">
         <h3>Projects</h3>
         <div class="projects-container">
@@ -134,7 +137,7 @@
             </div>
         </div>
     </section>
-    
+    <!-- certificates -->
     <section id="certificates">
         <h3>Certificates</h3>
         <div class="certificates-container">
@@ -163,7 +166,7 @@
             </div>
         </div>
     </section>
-
+    <!-- contact info -->
     <section id="contact">
         <h3>Contact Me</h3>
         <a href="mailto:arpitsparshv0211@gmail.com">
@@ -179,11 +182,11 @@
             <img src="assets/facebook-removebg-preview.png" alt="Facebook">
         </a>
     </section>
-    
+    <!-- footer  -->
     <footer>
         <p>&copy;. Sparsh Verma Portfolio </p>
     </footer>
-    
+    <!-- I have used the basic JS for header section and and the skills container -->
     <script>
         const hamburger = document.getElementById('hamburger-menu');
         const navMenu = document.getElementById('nav-menu');
@@ -191,6 +194,27 @@
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
+        document.addEventListener('DOMContentLoaded', function () {
+    const scrollContainer = document.querySelector('.skills-scroll');
+    const images = Array.from(scrollContainer.querySelectorAll('img'));
+
+    images.forEach(img => {
+        const clone = img.cloneNode(true);
+        scrollContainer.appendChild(clone);
+    });
+
+    const imageWidth = images[0].offsetWidth;
+    const imageMargin = parseInt(window.getComputedStyle(images[0]).marginLeft);
+    const totalWidth = (imageWidth + imageMargin * 2) * images.length * 2;
+
+
+    scrollContainer.style.width = `${totalWidth}px`;
+});
+
+
+
+
+
     </script>
 </body>
 </html>

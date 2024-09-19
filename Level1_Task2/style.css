@@ -61,7 +61,7 @@ body {
     border-radius: 8px;
 }
 
-/* Hamburger Menu Styling */
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -350,6 +350,8 @@ body {
         text-align: left;
     }
 }
+
+/* skills styling */
 #skills {
     text-align: center;
     padding: 50px 20px;
@@ -361,7 +363,6 @@ body {
 #skills h3 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    margin-bottom: 20px;
     background-image: linear-gradient(135deg, #B92B27 10%, #1565C0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -377,7 +378,7 @@ body {
 .skills-scroll {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    width: max-content;
     animation: scroll-left 20s linear infinite;
 }
 
@@ -409,11 +410,13 @@ body {
     display: block;
     width: 100%;
 }
+
 @media (max-width: 768px) {
     .skills-scroll {
-        animation: scroll-left 20s linear infinite; 
+        animation: scroll-left 10s linear infinite;
     }
 }
+/* projects styling */
 #projects {
     background-color: #000000;
     color: #f4f4f9;
@@ -512,6 +515,7 @@ body {
         font-size: 0.9rem;
     }
 }
+/* certificates styling */
 #certificates {
     background-color: #000000;
     color: #f4f4f9;
@@ -620,7 +624,7 @@ body {
         font-size: 0.9rem;
     }
 }
-
+/* contact me styling */
 #contact {
     background-color: #000;
     color: #f4f4f9;
@@ -669,9 +673,9 @@ body {
         margin: 0 10px;
     }
 }
-
+/* footer */
 footer {
-    background-color: #000; 
+    background-color: #000;
     color: #f4f4f9;
     padding: 20px 0;
     text-align: center;
