@@ -411,7 +411,7 @@ body {
 }
 @media (max-width: 768px) {
     .skills-scroll {
-        animation: scroll-left 6s linear infinite; 
+        animation: scroll-left 20s linear infinite; 
     }
 }
 #projects {
