@@ -1,49 +1,50 @@
 function performConversion() {
-    const inputTemp = document.getElementById('tempInput').value;
-    const sourceUnit = document.getElementById('unitSelect').value;
+    const tempInput = document.getElementById('tempInput').value.trim();
+    const unit = document.getElementById('unitSelect').value;
     const targetUnit = document.getElementById('targetUnitSelect').value;
-    const resultDisplay = document.getElementById('conversionResult');
-    
-    if (isNaN(inputTemp) || inputTemp.trim() === '') {
-        resultDisplay.innerHTML = 'Please enter a valid number!';
+    const resultContainer = document.getElementById('conversionResult');
+
+    if (!unit || !targetUnit) {
+        resultContainer.innerHTML = 'Please select both units.';
         return;
     }
 
-    const temperature = parseFloat(inputTemp);
-    let output = '';
+    const tempValue = parseFloat(tempInput);
 
-    // Convert the input temperature to Celsius first
-    let tempInCelsius;
-    switch (sourceUnit) {
-        case 'celsius':
-            tempInCelsius = temperature;
-            break;
-        case 'fahrenheit':
-            tempInCelsius = (temperature - 32) * 5/9;
-            break;
-        case 'kelvin':
-            tempInCelsius = temperature - 273.15;
-            break;
-        default:
-            resultDisplay.innerHTML = 'Unknown unit!';
-            return;
+    // Check if the input is not a number
+    if (isNaN(tempValue)) {
+        resultContainer.innerHTML = 'Invalid input: Please enter a numeric value.';
+        return;
     }
 
-    // Convert from Celsius to the target unit
-    switch (targetUnit) {
-        case 'celsius':
-            output = `${tempInCelsius} °C`;
-            break;
-        case 'fahrenheit':
-            output = `${(tempInCelsius * 9/5) + 32} °F`;
-            break;
-        case 'kelvin':
-            output = `${tempInCelsius + 273.15} K`;
-            break;
-        default:
-            resultDisplay.innerHTML = 'Unknown unit!';
-            return;
+    let convertedValue;
+
+    // Conversion logic
+    if (unit === 'celsius') {
+        if (targetUnit === 'fahrenheit') {
+            convertedValue = (tempValue * 9/5) + 32;
+        } else if (targetUnit === 'kelvin') {
+            convertedValue = tempValue + 273.15;
+        } else {
+            convertedValue = tempValue; // If both units are the same
+        }
+    } else if (unit === 'fahrenheit') {
+        if (targetUnit === 'celsius') {
+            convertedValue = (tempValue - 32) * 5/9;
+        } else if (targetUnit === 'kelvin') {
+            convertedValue = (tempValue - 32) * 5/9 + 273.15;
+        } else {
+            convertedValue = tempValue;
+        }
+    } else if (unit === 'kelvin') {
+        if (targetUnit === 'celsius') {
+            convertedValue = tempValue - 273.15;
+        } else if (targetUnit === 'fahrenheit') {
+            convertedValue = (tempValue - 273.15) * 9/5 + 32;
+        } else {
+            convertedValue = tempValue;
+        }
     }
 
-    resultDisplay.innerHTML = output;
+    resultContainer.innerHTML = `Result: ${convertedValue.toFixed(2)} ${targetUnit}`;
 }
